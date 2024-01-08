@@ -34,7 +34,8 @@ function processFolder(folderPath) {
             const ext = path.extname(file).toLowerCase();
             if (['.jpg'].includes(ext)) {
                 const exifData = extractExifData(filePath);
-                line.geometry.coordinates.push([exifData.GPSLongitude, exifData.GPSLatitude, exifData.GPSAltitude]);
+                //line.geometry.coordinates.push([exifData.GPSLongitude, exifData.GPSLatitude, exifData.GPSAltitude]);
+                line.geometry.coordinates.push([exifData.GPSLongitude, exifData.GPSLatitude]);
             }
         }
     });
